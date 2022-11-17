@@ -1,0 +1,49 @@
+.containerCounter {
+    width: 450px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #06b9c9;
+    background-color: #1d253a;
+    border-radius: 10px;
+}
+
+.counterInput {
+    height: 180px;
+    width: 410px;
+    font-size: 28px;
+    color: #06b9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #06b9c9;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.counterButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 410px;
+    height: 70px;
+    border: 3px solid #06b9c9;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.errorInput {
+    background-color: palevioletred;
+}
+
+.input {
+    font-weight: bold;
+    border-color: aqua;
+    border-radius: 5px;
+    text-align: center;
+    height: 25px;
+    width: 150px;
+}
+
