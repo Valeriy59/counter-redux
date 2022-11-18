@@ -9,14 +9,15 @@ type PropsType = {
     className: string
 }
 
-export function Input(props: PropsType) {
+export function Input1(props: PropsType) {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         props.setHandler(Number(e.currentTarget.value))
     }
 
     return (
         <div>
-            <span>{props.title}</span> <input className={props.className} type={'number'} value={props.value} onChange={onChangeCallback}/>
+            <span>{props.title}</span>
+            <input className={props.className} type={'number'} value={props.value} onChange={onChangeCallback}/>
         </div>
     )
 }

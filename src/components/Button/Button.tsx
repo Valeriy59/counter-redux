@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Button.module.css'
+
 type ButtonPropsType = {
     title: string
     disabled?: boolean
