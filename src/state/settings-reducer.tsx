@@ -24,12 +24,12 @@ export type ActionType = SetStartValueActionType | SetMaxValueActionType | SetSe
 export type SettingsStateType = {
     maxValue: number
     startValue: number
-    error: boolean
+    // error: boolean
 }
 const initialState: SettingsStateType = {
     maxValue: 5,
     startValue: 0,
-    error: false
+    // error: false
 }
 
 export function settingsReducer(state: SettingsStateType = initialState, action: ActionType) {
@@ -40,8 +40,8 @@ export function settingsReducer(state: SettingsStateType = initialState, action:
             return {...state, maxValue: action.maxValue};
         case 'SET-SETTINGS-TO-STORAGE':
             return {...state, startValue: action.startValue, maxValue: action.maxValue};
-        case 'SET-ERROR':
-            return {...state, error: action.error};
+        // case 'SET-ERROR':
+        //     return {...state, error: action.error};
         default:
             return state
     }
@@ -56,6 +56,6 @@ export const setMaxValueAC = (maxValue: number): SetMaxValueActionType => {
 export const setSettingsToStorageAC = (startValue: number, maxValue: number): SetSettingsToStorageActionType => {
     return { type: 'SET-SETTINGS-TO-STORAGE', startValue, maxValue} as const
 }
-export const setErrorAC = (error: boolean): SetErrorActionType => {
-    return { type: 'SET-ERROR', error} as const
-}
+// export const setErrorAC = (error: boolean): SetErrorActionType => {
+//     return { type: 'SET-ERROR', error} as const
+// }

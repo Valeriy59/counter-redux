@@ -3,6 +3,7 @@ import s from './App.module.css';
 import {Counter} from "./components/Counter";
 import {Settings} from "./components/Settings/Settings";
 import {store} from "./state/state";
+import {Grid} from "@mui/material";
 
 
 function App() {
@@ -11,10 +12,16 @@ function App() {
     }, [])
 
   return (
-    <div className={s.App}>
-      <Counter/>
-      <Settings/>
-    </div>
+      <div className={s.App}>
+          <Grid container spacing={1}>
+              <Grid item xs={6} style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <Counter/>
+              </Grid>
+              <Grid item xs={6} style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <Settings/>
+              </Grid>
+          </Grid>
+      </div>
   );
 }
 

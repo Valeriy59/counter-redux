@@ -1,5 +1,5 @@
 import {SettingsStateType} from "./settings-reducer";
-import {StateType} from "./state";
+
 
 export const loadState = () => {
     try {

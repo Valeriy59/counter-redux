@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {incrementCounterAC, resetCounterAC, CounterStateType} from "../state/counter-reducer";
 import {AppRootStateType, store} from "../state/state";
 import {SettingsStateType} from "../state/settings-reducer";
-import {Button} from "@mui/material";
+import {Button, Paper} from "@mui/material";
 
 
 export function Counter() {
@@ -17,10 +17,11 @@ export function Counter() {
         counterState.counterValue = settingsState.startValue
     }, [])
     return (
-        <div className={s.containerCounter}>
+        <Paper elevation={24} className={s.containerCounter}  >
             <div className={s.counterInput}>
                 <div>
-                    <span className={counterState.counterValue >= settingsState.maxValue ? s.error : ""}>{counterState.counterValue}</span></div>
+                    <span className={counterState.counterValue >= settingsState.maxValue ? s.error : ""}>{counterState.counterValue}</span>
+                </div>
             </div>
             <div className={s.counterButtons}>
                     {/*<Button*/}
@@ -48,6 +49,6 @@ export function Counter() {
                     >reset
                     </Button>
             </div>
-        </div>
+        </Paper>
     )
 }
